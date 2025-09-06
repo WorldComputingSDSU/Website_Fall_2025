@@ -4,7 +4,7 @@ import Home from "../home/Home";
 import Upcoming from "../upcomingEvents/Upcoming";
 import Connect from "../connect/Connect";
 import Footer from "../footer/Footer";
-import "/Users/darielgutierrez/Desktop/Website_Fall_2025/wcofall25/src/index.css";
+import "../../index.css";
 
 const HomePage = () => {
   return (

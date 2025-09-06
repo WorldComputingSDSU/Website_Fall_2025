@@ -1,5 +1,5 @@
 import { Card, CardContent, CardMedia, Typography, Link } from "@mui/material";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function ProjectShowcase({
@@ -13,8 +13,7 @@ export default function ProjectShowcase({
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-    >
+      transition={{ duration: 0.4 }}>
       <Card
         sx={{
           mt: 3,
@@ -26,8 +25,7 @@ export default function ProjectShowcase({
           p: 2,
           mb: 3,
           border: "1px, solid, silver",
-        }}
-      >
+        }}>
         {/* Project Screenshot */}
         <CardMedia
           component="img"
@@ -41,8 +39,7 @@ export default function ProjectShowcase({
 
         {/* Project Content */}
         <CardContent
-          sx={{ flex: 1, ml: { xs: 0, md: 3 }, mt: { xs: 2, md: 0 } }}
-        >
+          sx={{ flex: 1, ml: { xs: 0, md: 3 }, mt: { xs: 2, md: 0 } }}>
           <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
             {title}
           </Typography>
@@ -53,8 +50,7 @@ export default function ProjectShowcase({
 
           <Typography
             variant="subtitle2"
-            sx={{ fontWeight: 600, color: "gray.400", mb: 2 }}
-          >
+            sx={{ fontWeight: 600, color: "gray.400", mb: 2 }}>
             {stack}
           </Typography>
 
@@ -69,8 +65,7 @@ export default function ProjectShowcase({
               color: "white",
               "&:hover": { textDecoration: "underline" },
               width: "fit-content",
-            }}
-          >
+            }}>
             <GitHubIcon sx={{ mr: 1 }} /> GitHub Link{" "}
           </Link>
         </CardContent>

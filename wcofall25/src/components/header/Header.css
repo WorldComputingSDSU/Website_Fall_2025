@@ -34,3 +34,31 @@ body {
   border: none;
   padding: 0;
 }
+
+.wco-header-logo:hover {
+  cursor: pointer;
+}
+
+.wco-header-right-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-right: 32px;
+}
+
+.wco-header-right-items {
+  color: #fff;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  margin-right: 0;
+}
+
+.wco-header-projects:hover {
+  cursor: pointer;
+}
+
+.wco-header-right-items:hover {
+  cursor: pointer;
+}
