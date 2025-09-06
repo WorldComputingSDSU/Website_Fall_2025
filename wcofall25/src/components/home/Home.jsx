@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
-import sampleImg from "../../assets/class.png"; // Replace with your actual image path
-import imageImg from "../../assets/image.png"; // Add your second image
+import sampleImg from "../../assets/class.png";
+import imageImg from "../../assets/image.png";
 import "./Home.css";
 
 function Home() {
-  // Array of images for the slideshow - add your imported images here
   const images = [
     { src: sampleImg, alt: "WCO Group Meeting" },
     { src: imageImg, alt: "WCO Event" },
-    // Add more images here as you import them
-    // { src: yourImage3, alt: "Description" },
-    // { src: yourImage4, alt: "Description" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
