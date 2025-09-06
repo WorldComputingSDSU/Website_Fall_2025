@@ -1,18 +1,17 @@
 import "./App.css";
-import Header from "./components/header/Header";
-import Home from "./components/home/Home";
-import Upcoming from "./components/upcomingEvents/Upcoming";
-import Connect from "./components/connect/Connect";
-import Footer from "./components/footer/Footer";
+import HomePage from "./components/Pages/HomePage";
+import Projects from "./components/Pages/Projects";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home />
-      <Upcoming />
-      <Connect />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
