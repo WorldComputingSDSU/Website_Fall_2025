@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import sampleImg from "../../assets/class.png";
-import imageImg from "../../assets/image.png";
+import meetingImg from "../../assets/meeting.png";
+import websiteMeeting from "../../assets/websiteMeeting.png";
+import firstMeeting from "../../assets/firstMeeting.png";
 import "./Home.css";
 
 function Home() {
   const images = [
     { src: sampleImg, alt: "WCO Group Meeting" },
-    { src: imageImg, alt: "WCO Event" },
+    { src: meetingImg, alt: "WCO Meeting" },
+    { src: websiteMeeting, alt: "WCO Website Meeting" },
+    { src: firstMeeting, alt: "WCO First Meeting" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
