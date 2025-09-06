@@ -92,6 +92,24 @@ body {
   margin: 0;
 }
 
+.membership-form-content {
+  padding: 40px;
+  min-height: calc(100vh - 56px);
+}
+
+.membership-form-content h1 {
+  color: #162852;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.membership-form-content p {
+  color: #6b7280;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .content {
     padding: 20px;
@@ -103,5 +121,9 @@ body {
 
   .university-text {
     margin-bottom: 3vh;
+  }
+
+  .membership-form-content {
+    padding: 20px;
   }
 }

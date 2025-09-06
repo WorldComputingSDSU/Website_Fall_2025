@@ -16,7 +16,7 @@ function Header() {
         </div>
         <div
           className="wco-header-right-items"
-          onClick={() => navigate("/MembershipForm")}>
+          onClick={() => navigate("/membership")}>
           Membership Form
         </div>
       </div>
