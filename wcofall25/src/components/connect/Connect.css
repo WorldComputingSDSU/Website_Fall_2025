@@ -1,0 +1,117 @@
+.connect-section {
+  min-height: 100vh;
+  background: #fff;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  scroll-snap-align: start;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.connect-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.connect-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.connect-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #162852;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.connect-description {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.discord-widget-container {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discord-widget {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(22, 40, 82, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discord-widget:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(22, 40, 82, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .connect-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .connect-content {
+    max-width: 100%;
+  }
+
+  .connect-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect-section {
+    padding: 60px 20px;
+  }
+
+  .connect-title {
+    font-size: 2rem;
+  }
+
+  .connect-description {
+    font-size: 1.1rem;
+  }
+
+  .discord-widget {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-section {
+    padding: 40px 16px;
+  }
+
+  .connect-title {
+    font-size: 1.8rem;
+  }
+
+  .connect-description {
+    font-size: 1rem;
+  }
+
+  .discord-widget {
+    height: 350px;
+  }
+}
