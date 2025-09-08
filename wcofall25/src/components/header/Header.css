@@ -33,6 +33,10 @@ body {
   background: none;
   border: none;
   padding: 0;
+  display: flex;
+  align-items: center;
+  transform-origin: center;
+  transition: transform 160ms ease;
 }
 
 .wco-header-logo:hover {
@@ -53,6 +57,10 @@ body {
   font-size: 1.2rem;
   letter-spacing: 0.04em;
   margin-right: 0;
+  display: inline-flex;
+  align-items: center;
+  transform-origin: center;
+  transition: transform 160ms ease, color 160ms ease;
 }
 
 .wco-header-projects:hover {
@@ -61,4 +69,79 @@ body {
 
 .wco-header-right-items:hover {
   cursor: pointer;
+  transform: scale(1.06);
+}
+
+.wco-header-logo:hover {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wco-header-logo,
+  .wco-header-right-items {
+    transition: none;
+  }
+}
+
+.wco-header-logo img {
+  display: block;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.wco-header-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 16px;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 160ms ease;
+}
+
+.wco-header-menu-button:hover {
+  transform: scale(1.06);
+}
+
+.wco-header-menu {
+  position: fixed;
+  top: 56px;
+  right: 8px;
+  background: #0f1c3d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  padding: 8px 0;
+  z-index: 101;
+  min-width: 180px;
+}
+
+.wco-header-menu-item {
+  color: #ffffff;
+  padding: 10px 14px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.wco-header-menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(2px);
+  cursor: pointer;
+}
+
+/* Responsive behavior */
+@media (max-width: 800px) {
+  .wco-header-right-container {
+    display: none;
+  }
+
+  .wco-header-menu-button {
+    display: inline-block;
+  }
 }

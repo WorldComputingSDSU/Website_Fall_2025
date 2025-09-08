@@ -1,0 +1,15 @@
+@media (max-width: 1200px) {
+  .membership-row {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .membership-left {
+    align-items: center !important;
+  }
+
+  .membership-right {
+    justify-content: center !important;
+  }
+}
