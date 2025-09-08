@@ -65,16 +65,20 @@ function Home() {
     <main className="home">
       <div className="wco-hero-row">
         <div className="wco-hero-left">
-          <h1 className={`wco-hero-title ${showTitle ? "slide-up" : ""}`}>
-            WORLD COMPUTING ORGANIZATION
-          </h1>
-          <p className={`wco-hero-desc ${showContent ? "slide-up" : ""}`}>
-            We're a club on campus at San Diego State University trying to help
-            you learn, grow, and connect with others in the tech industry
-            through various workshops, projects, and events.
-          </p>
-          <div className={`wco-hero-btns ${showContent ? "slide-up" : ""}`}>
-            <button className="wco-btn wco-btn-primary">Join Us!</button>
+          <div className="wco-hero-title-wrap">
+            <h1 className={`wco-hero-title ${showTitle ? "slide-up" : ""}`}>
+              WORLD COMPUTING ORGANIZATION
+            </h1>
+          </div>
+          <div className="wco-hero-content-wrap">
+            <p className={`wco-hero-desc ${showContent ? "slide-up" : ""}`}>
+              We're a club on campus at San Diego State University trying to
+              help you learn, grow, and connect with others in the tech industry
+              through various workshops, projects, and events.
+            </p>
+            <div className={`wco-hero-btns ${showContent ? "slide-up" : ""}`}>
+              <button className="wco-btn wco-btn-primary">Join Us!</button>
+            </div>
           </div>
         </div>
         <div className="wco-hero-right">

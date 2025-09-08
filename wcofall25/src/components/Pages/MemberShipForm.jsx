@@ -3,6 +3,7 @@ import Header from "../header/Header";
 import { Box, Container, Typography } from "@mui/material";
 import Footer from "../footer/Footer";
 import { motion } from "framer-motion";
+import "./Membership.css";
 
 const MemberShipForm = () => {
   return (
@@ -10,6 +11,7 @@ const MemberShipForm = () => {
       <Container sx={{ px: 2 }}>
         <Header />
         <Box
+          className="membership-row"
           sx={{
             display: "flex",
             flexDirection: { xs: "column", lg: "row" },
@@ -20,13 +22,13 @@ const MemberShipForm = () => {
           }}>
           {/* Left side - Content */}
           <motion.div
+            className="membership-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "flex-start",
               justifyContent: "flex-start",
               gap: "24px",
               flex: "0 0 500px",
@@ -44,7 +46,7 @@ const MemberShipForm = () => {
                   mb: "18px",
                   lineHeight: 1.1,
                   marginTop: "10px",
-                  textAlign: "left",
+                  textAlign: { xs: "center", lg: "left" },
                 }}>
                 Join the World Computing Organization!
               </Typography>
@@ -58,7 +60,7 @@ const MemberShipForm = () => {
                   fontSize: "1.3rem",
                   fontWeight: "900",
                   color: "#162852",
-                  textAlign: "left",
+                  textAlign: { xs: "center", lg: "left" },
                 }}>
                 Join the World Computing Organization and be part of our team!
               </Typography>
@@ -71,7 +73,7 @@ const MemberShipForm = () => {
                 sx={{
                   fontSize: "1.1rem",
                   color: "#6b7280",
-                  textAlign: "left",
+                  textAlign: { xs: "center", lg: "left" },
                   lineHeight: 1.6,
                 }}>
                 Fill out the form on the right to become a member of WCO. We
@@ -87,7 +89,7 @@ const MemberShipForm = () => {
                 sx={{
                   fontSize: "1rem",
                   color: "#6b7280",
-                  textAlign: "left",
+                  textAlign: { xs: "center", lg: "left" },
                   lineHeight: 1.6,
                 }}>
                 As a member, you'll have access to:
@@ -98,7 +100,11 @@ const MemberShipForm = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}>
-              <Box sx={{ pl: 2 }}>
+              <Box
+                sx={{
+                  pl: { xs: 0, lg: 2 },
+                  textAlign: { xs: "center", lg: "left" },
+                }}>
                 <Typography
                   sx={{ fontSize: "0.95rem", color: "#6b7280", mb: 1 }}>
                   • Hands-on development projects

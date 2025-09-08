@@ -35,6 +35,18 @@ main.home {
   min-width: 320px;
 }
 
+.wco-hero-title-wrap {
+  order: 1;
+  width: 100%;
+}
+.wco-hero-content-wrap {
+  order: 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .wco-hero-title {
   font-size: 3.5rem;
   font-weight: 900;
@@ -234,6 +246,37 @@ main.home {
   background: linear-gradient(0deg, #162852 0%, rgba(22, 40, 82, 0) 100%);
   z-index: 1;
   pointer-events: none;
+}
+
+/* Responsive reordering: under 1125px, stack as Title -> Slideshow -> Description/Button */
+@media (max-width: 1125px) {
+  .wco-hero-row {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .wco-hero-left,
+  .wco-hero-right {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .wco-hero-title-wrap {
+    order: 1;
+  }
+  .wco-hero-right {
+    order: 2;
+  }
+  .wco-hero-content-wrap {
+    order: 3;
+  }
+
+  .slideshow-container {
+    width: 92vw;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
 }
 /* Centered main content for Home */
 .home {
