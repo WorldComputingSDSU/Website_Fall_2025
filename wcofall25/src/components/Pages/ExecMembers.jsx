@@ -146,7 +146,7 @@ const ExecMembers = () => {
             fontSize: "0.8rem",
           }}
         >
-          Class of {member.year === "Senior" ? "2025" : member.year === "Junior" ? "2026" : "2027"}
+          Class of {member.year === "Senior" ? "2026" : member.year === "Junior" ? "2027" : "2028"}
         </Typography>
 
         <Divider sx={{ my: 1, mx: 1 }} />
