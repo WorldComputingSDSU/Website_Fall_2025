@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../header/Header";
-import { Box, Container, Typography, Grid, Card, CardContent, Avatar, Divider } from "@mui/material";
+import { Box, Container, Typography, Grid, Card, Avatar, Divider } from "@mui/material";
 import Footer from "../footer/Footer";
 
 const ExecMembers = () => {
@@ -22,22 +22,6 @@ const ExecMembers = () => {
       email: "@sdsu.edu"
     },
     {
-      name: "Victoria Napoleon",
-      position: "Treasurer",
-      image: "https://via.placeholder.com/200x200/162852/ffffff?text=MJ",
-      bio: "Business and Computer Science double major with expertise in financial management and strategic resource allocation for organizational growth.",
-      year: "Junior",
-      email: "@sdsu.edu"
-    },
-    {
-      name: "Luke files",
-      position: "Secretary",
-      image: "https://via.placeholder.com/200x200/162852/ffffff?text=SW",
-      bio: "Computer Science student specializing in organizational communications, documentation, and member engagement initiatives.",
-      year: "Junior",
-      email: "@sdsu.edu"
-    },
-    {
       name: "Deriel Gustavo",
       position: "VP of Diversity",
       image: "https://via.placeholder.com/200x200/162852/ffffff?text=AC",
@@ -54,8 +38,32 @@ const ExecMembers = () => {
       email: "@sdsu.edu"
     },
     {
+      name: "Luke files",
+      position: "Secretary",
+      image: "https://via.placeholder.com/200x200/162852/ffffff?text=SW",
+      bio: "Computer Science student specializing in organizational communications, documentation, and member engagement initiatives.",
+      year: "Junior",
+      email: "@sdsu.edu"
+    },
+    {
+      name: "Victoria Napoleon",
+      position: "Treasurer",
+      image: "https://via.placeholder.com/200x200/162852/ffffff?text=MJ",
+      bio: "Business and Computer Science double major with expertise in financial management and strategic resource allocation for organizational growth.",
+      year: "Junior",
+      email: "@sdsu.edu"
+    },
+    {
       name: "Jacob Silva",
       position: "VP of Proffesional Development",
+      image: "https://via.placeholder.com/200x200/162852/ffffff?text=ER",
+      bio: "Computer Science student orchestrating professional workshops, networking events, and community outreach programs to enhance member experience.",
+      year: "Junior",
+      email: "@sdsu.edu"
+    },
+    {
+      name: "UnKnown",
+      position: "VP of Outreach",
       image: "https://via.placeholder.com/200x200/162852/ffffff?text=ER",
       bio: "Computer Science student orchestrating professional workshops, networking events, and community outreach programs to enhance member experience.",
       year: "Junior",
@@ -76,52 +84,52 @@ const ExecMembers = () => {
         boxShadow: isLeadership 
           ? "0 8px 32px rgba(22, 40, 82, 0.12)" 
           : "0 4px 20px rgba(0,0,0,0.08)",
-        borderRadius: "16px",
+        borderRadius: "12px",
         border: isLeadership ? "2px solid #162852" : "1px solid #e5e7eb",
         transition: "all 0.3s ease-in-out",
         "&:hover": {
-          transform: "translateY(-8px)",
+          transform: "translateY(-4px)",
           boxShadow: isLeadership 
             ? "0 16px 40px rgba(22, 40, 82, 0.2)" 
             : "0 12px 32px rgba(0,0,0,0.15)",
         },
       }}
     >
-      <Box sx={{ p: 4, textAlign: "center", flexGrow: 1 }}>
+      <Box sx={{ p: 2, textAlign: "center", flexGrow: 1 }}>
         <Avatar
           src={member.image}
           alt={member.name}
           sx={{
-            width: isLeadership ? 140 : 120,
-            height: isLeadership ? 140 : 120,
+            width: isLeadership ? 96 : 80,
+            height: isLeadership ? 96 : 80,
             mx: "auto",
-            mb: 3,
-            fontSize: isLeadership ? "2.5rem" : "2rem",
+            mb: 1.5,
+            fontSize: isLeadership ? "1.6rem" : "1.4rem",
             fontWeight: "bold",
-            border: "4px solid #f8fafc",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
+            border: "3px solid #f8fafc",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
           }}
         />
         
         <Typography
-          variant="h5"
+          variant="h6"
           sx={{
             fontWeight: 700,
             color: "#162852",
-            mb: 1,
-            fontSize: isLeadership ? "1.5rem" : "1.3rem",
+            mb: 0.5,
+            fontSize: isLeadership ? "1.1rem" : "1rem",
           }}
         >
           {member.name}
         </Typography>
         
         <Typography
-          variant="h6"
+          variant="subtitle2"
           sx={{
             color: "#162852",
             fontWeight: 600,
-            mb: 1,
-            fontSize: isLeadership ? "1.1rem" : "1rem",
+            mb: 0.5,
+            fontSize: isLeadership ? "0.95rem" : "0.9rem",
             textTransform: "uppercase",
             letterSpacing: "0.5px",
           }}
@@ -133,23 +141,24 @@ const ExecMembers = () => {
           variant="body2"
           sx={{
             color: "#9ca3af",
-            mb: 2,
+            mb: 1,
             fontWeight: 500,
-            fontSize: "0.9rem",
+            fontSize: "0.8rem",
           }}
         >
           Class of {member.year === "Senior" ? "2025" : member.year === "Junior" ? "2026" : "2027"}
         </Typography>
 
-        <Divider sx={{ my: 2, mx: 2 }} />
+        <Divider sx={{ my: 1, mx: 1 }} />
         
         <Typography
           variant="body2"
           sx={{
             color: "#6b7280",
-            lineHeight: 1.7,
-            mb: 2,
+            lineHeight: 1.5,
+            mb: 1,
             fontStyle: "italic",
+            fontSize: "0.85rem",
           }}
         >
           {member.bio}
@@ -160,7 +169,7 @@ const ExecMembers = () => {
           sx={{
             color: "#162852",
             fontWeight: 500,
-            fontSize: "0.85rem",
+            fontSize: "0.8rem",
           }}
         >
           {member.email}
@@ -237,25 +246,19 @@ const ExecMembers = () => {
            >
              Leadership Team
            </Typography>
-           <Grid 
-             container 
-             spacing={6} 
-             justifyContent="center"
-             sx={{
-               display: 'flex',
-               flexWrap: 'wrap',
-               '& > .MuiGrid-item': {
-                 flexBasis: 'auto !important',
-                 maxWidth: 'none !important',
-               }
-             }}
-           >
-             {leadership.map((member, index) => (
-               <Grid item xs={12} sm={6} md={6} lg={5} key={index}>
-                 <MemberCard member={member} isLeadership={true} />
-               </Grid>
-             ))}
-           </Grid>
+           <Box
+            sx={{
+              display: 'grid',
+              gap: 3,
+              gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
+              maxWidth: 1200,
+              mx: 'auto'
+            }}
+          >
+            {leadership.map((member, index) => (
+              <MemberCard key={index} member={member} isLeadership={true} />
+            ))}
+          </Box>
            
   
          </Box>
@@ -286,24 +289,22 @@ const ExecMembers = () => {
            >
              Executive Directors
            </Typography>
-           <Grid 
-             container 
-             spacing={4}
-             sx={{
-               display: 'flex',
-               flexWrap: 'wrap',
-               '& > .MuiGrid-item': {
-                 flexBasis: 'auto !important',
-                 maxWidth: 'none !important',
-               }
-             }}
-           >
-             {executiveTeam.map((member, index) => (
-               <Grid item xs={12} sm={6} md={4} lg={4} key={index + 2}>
-                 <MemberCard member={member} />
-               </Grid>
-             ))}
-           </Grid>
+           <Box
+            sx={{
+              display: 'grid',
+              gap: 2,
+              gridTemplateColumns: {
+                xs: '1fr',
+                sm: 'repeat(2, 1fr)',
+                md: 'repeat(2, 1fr)',
+                lg: 'repeat(2, 1fr)'
+              }
+            }}
+          >
+            {executiveTeam.map((member, index) => (
+              <MemberCard key={index} member={member} />
+            ))}
+          </Box>
          </Box>
 
         {/* Contact Section */}
