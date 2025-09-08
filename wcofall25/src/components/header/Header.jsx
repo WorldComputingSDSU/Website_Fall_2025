@@ -27,6 +27,11 @@ function Header() {
           onClick={() => go("/membership")}>
           Membership Form
         </div>
+        <div
+          className="wco-header-right-items"
+          onClick={() => navigate("/exec")}>
+          Exec Board
+        </div>
       </div>
 
       <button
