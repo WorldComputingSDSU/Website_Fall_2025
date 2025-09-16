@@ -36,7 +36,7 @@ const ExecMembers = () => {
       image:
         "https://media.licdn.com/dms/image/v2/D5603AQFq17E8o7NgpA/profile-displayphoto-scale_200_200/B56ZeD3mXeHQAY-/0/1750264086048?e=1760572800&v=beta&t=FMljm0rqoh263eUUg8BmntVEHbZ3-oUQpDght0RyEZ0",
       bio: "Computer Science student focused on helping members learn and grow through different projects, workshops, and events. Previously @ SalesForce.",
-      year: "Senior",
+      year: "Junior",
       email: "dgutierrez4085@sdsu.edu",
     },
     {
@@ -62,7 +62,7 @@ const ExecMembers = () => {
       position: "Treasurer",
       image:
         "https://media.licdn.com/dms/image/v2/D4E03AQFpWLGhgqu1Wg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724917967863?e=1760572800&v=beta&t=9L1VybaE7AEwCgxYl1N7h-A6ZXqshTgpPRdICvxtxFs",
-      bio: "Business major with expertise in financial management and strategic resource allocation for organizational growth.",
+      bio: "Finance major with expertise in financial management and strategic resource allocation for organizational growth.",
       year: "Junior",
       email: "vnapoleon9930@sdsu.edu",
     },
@@ -71,18 +71,19 @@ const ExecMembers = () => {
       position: "VP of Proffesional Development",
       image:
         "https://media.licdn.com/dms/image/v2/D5603AQHTiNbMeARQhw/profile-displayphoto-shrink_200_200/B56ZPGemPcGsAY-/0/1734201730582?e=1760572800&v=beta&t=eazXBMh-qhBIxFV0EpxYpRCR2po2RnwHfvKtCVbbUeE",
-      bio: "Computer Science student orchestrating professional workshops, networking events, and community outreach programs to enhance member experience.",
+      bio: "Computer Science student orchestrating professional workshops, networking events, and community outreach programs to enhance member experience. Previously @ Apple.",
       year: "Senior",
       email: "jsilva8771@sdsu.edu",
-    } /*,
+    },
     {
-      name: "UnKnown",
+      name: "Maximilian Kocherga",
       position: "VP of Outreach",
-      image: "https://via.placeholder.com/200x200/162852/ffffff?text=ER",
-      bio: "Computer Science student orchestrating professional workshops, networking events, and community outreach programs to enhance member experience.",
+      image:
+        "https://media.licdn.com/dms/image/v2/D4E03AQFhjkg3DZupTw/profile-displayphoto-shrink_800_800/B4EZdgPZ8uHsAo-/0/1749666341915?e=1761177600&v=beta&t=6FIzYnXxYQrFm9FlP8fW0_bu0GkOb9uhzjPQ-59qXjo",
+      bio: "Marketing Major with a passion for community engagement and brand development. Driving outreach initiatives to expand our club's impact.",
       year: "Junior",
-      email: "@sdsu.edu",
-    },*/,
+      email: "mkocherga7657@sdsu.edu",
+    },
   ];
 
   const leadership = execMembers.slice(0, 2);

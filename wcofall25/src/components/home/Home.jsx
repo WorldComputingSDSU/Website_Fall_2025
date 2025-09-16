@@ -4,6 +4,7 @@ import meetingImg from "../../assets/meeting.png";
 import websiteMeeting from "../../assets/websiteMeeting.png";
 import firstMeeting from "../../assets/firstMeeting.png";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const images = [
@@ -12,6 +13,11 @@ function Home() {
     { src: websiteMeeting, alt: "WCO Website Meeting" },
     { src: firstMeeting, alt: "WCO First Meeting" },
   ];
+
+  const navigate = useNavigate();
+  const go = (Path) => {
+    navigate(Path);
+  };
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -77,7 +83,11 @@ function Home() {
               through various workshops, projects, and events.
             </p>
             <div className={`wco-hero-btns ${showContent ? "slide-up" : ""}`}>
-              <button className="wco-btn wco-btn-primary">Join Us!</button>
+              <button
+                className="wco-btn wco-btn-primary"
+                onClick={() => go("/membership")}>
+                Join Us!
+              </button>
             </div>
           </div>
         </div>

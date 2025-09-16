@@ -159,11 +159,12 @@ const MemberShipForm = () => {
                 viewport={{ once: true, amount: 0.3 }}>
                 <iframe
                   src="https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?embedded=true"
-                  width="640"
+                  width="500"
                   height="1360"
                   frameBorder="0"
                   marginHeight="0"
                   marginWidth="0"
+                  className="membership-iframe"
                   style={{
                     border: "none",
                     borderRadius: "8px",

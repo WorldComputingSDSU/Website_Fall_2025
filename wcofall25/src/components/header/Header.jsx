@@ -19,6 +19,10 @@ function Header() {
       </div>
 
       <div className="wco-header-right-container">
+        <div className="wco-header-right-items" onClick={() => go("/")}>
+          Home
+        </div>
+
         <div className="wco-header-right-items" onClick={() => go("/projects")}>
           Projects
         </div>
@@ -43,6 +47,9 @@ function Header() {
 
       {menuOpen && (
         <div className="wco-header-menu">
+          <div className="wco-header-menu-item" onClick={() => go("/")}>
+            Home
+          </div>
           <div className="wco-header-menu-item" onClick={() => go("/projects")}>
             Projects
           </div>
@@ -50,6 +57,9 @@ function Header() {
             className="wco-header-menu-item"
             onClick={() => go("/membership")}>
             Membership Form
+          </div>
+          <div className="wco-header-menu-item" onClick={() => go("/exec")}>
+            Exec Board
           </div>
         </div>
       )}
