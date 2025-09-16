@@ -13,3 +13,9 @@
     justify-content: center !important;
   }
 }
+
+@media (max-width: 800px) {
+  .membership-iframe {
+    width: 85% !important;
+  }
+}
