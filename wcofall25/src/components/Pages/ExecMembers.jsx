@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@mui/material";
 import Footer from "../footer/Footer";
+import victoria from "../../assets/vic2.png";
 
 const ExecMembers = () => {
   const execMembers = [
@@ -60,8 +61,7 @@ const ExecMembers = () => {
     {
       name: "Victoria Napoleon",
       position: "Treasurer",
-      image:
-        "https://media.licdn.com/dms/image/v2/D4E03AQFpWLGhgqu1Wg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724917967863?e=1760572800&v=beta&t=9L1VybaE7AEwCgxYl1N7h-A6ZXqshTgpPRdICvxtxFs",
+      image: victoria,
       bio: "Finance major with expertise in financial management and strategic resource allocation for organizational growth.",
       year: "Junior",
       email: "vnapoleon9930@sdsu.edu",
