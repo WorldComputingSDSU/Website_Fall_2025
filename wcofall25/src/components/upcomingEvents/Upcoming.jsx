@@ -56,7 +56,11 @@ function Upcoming() {
                 </div>
               </div>
 
-              <button className="event-button">Learn More</button>
+              <button
+                className="event-button"
+                onClick={() => (window.location.href = event.learnMore)}>
+                Learn More
+              </button>
             </div>
           ))}
         </div>
