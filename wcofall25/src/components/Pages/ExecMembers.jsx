@@ -10,14 +10,20 @@ import {
 } from "@mui/material";
 import Footer from "../footer/Footer";
 import victoria from "../../assets/vic2.png";
+import Caleb from "../../assets/calebProf.png";
+import Enzo from "../../assets/enzoHeadshot.jpeg";
+import Adam from "../../assets/adamHeadshot.jpeg";
+import dih from "../../assets/dihHeadshot.jpeg";
+import Luke from "../../assets/lukeHeadshot.jpeg";
+import Jacob from "../../assets/jacobHeadshot.jpeg";
+import Max from "../../assets/MaxHeadshot.jpeg";
 
 const ExecMembers = () => {
   const execMembers = [
     {
       name: "Enzo Weiss",
       position: "President",
-      image:
-        "https://media.licdn.com/dms/image/v2/D4E03AQGwXAlHhYAJhw/profile-displayphoto-shrink_200_200/B4EZZmE7k0HYAg-/0/1745469291462?e=1760572800&v=beta&t=Gcyw2PLuQbTz2KcEuJfcN1EBIZ9aIz_Ss2QWLkO8pJY",
+      image: Enzo,
       bio: "Computer Science major with a passion for technology and leadership. Leading WCO to new heights through strategic vision and collaborative excellence.",
       year: "Junior",
       email: "eweiss5244@sdsu.edu",
@@ -25,8 +31,7 @@ const ExecMembers = () => {
     {
       name: "Caleb Dickson",
       position: "Vice President",
-      image:
-        "https://media.licdn.com/dms/image/v2/D5603AQHmBMt1Fe8y8A/profile-displayphoto-shrink_200_200/B56ZQoKTztGQAY-/0/1735840579562?e=1760572800&v=beta&t=PFB_XHcTmelH6BjnqMW0rYs39o2H2FDSnls5yIk7ngI",
+      image: Caleb,
       bio: "Computer Science student focused on building innovative solutions and fostering community growth. Dedicated to advancing our mission through technology.",
       year: "Junior",
       email: "cdickson9858@sdsu.edu",
@@ -34,8 +39,7 @@ const ExecMembers = () => {
     {
       name: "Deriel Gutierrez",
       position: "Director of Technology",
-      image:
-        "https://media.licdn.com/dms/image/v2/D5603AQFq17E8o7NgpA/profile-displayphoto-scale_200_200/B56ZeD3mXeHQAY-/0/1750264086048?e=1760572800&v=beta&t=FMljm0rqoh263eUUg8BmntVEHbZ3-oUQpDght0RyEZ0",
+      image: dih,
       bio: "Computer Science student focused on helping members learn and grow through different projects, workshops, and events. Previously @ SalesForce.",
       year: "Junior",
       email: "dgutierrez4085@sdsu.edu",
@@ -43,8 +47,7 @@ const ExecMembers = () => {
     {
       name: "Adam Macfarlane",
       position: "Project Manager",
-      image:
-        "https://media.licdn.com/dms/image/v2/D4D03AQEabVDJk4TsMw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1714589141629?e=1760572800&v=beta&t=lVVEaUA690OEUTz1cA2Wj1hGEsMd_i6DVkgo6Qlq9nE",
+      image: Adam,
       bio: "Computer Science student orchestrating professional workshops, and collaborative projects.",
       year: "Junior",
       email: "amacfarlane2840@sdsu.edu",
@@ -52,8 +55,7 @@ const ExecMembers = () => {
     {
       name: "Luke files",
       position: "Secretary",
-      image:
-        "https://media.licdn.com/dms/image/v2/D5603AQFbq8nct1cP6w/profile-displayphoto-shrink_200_200/B56ZUkoksiHsAY-/0/1740076371005?e=1760572800&v=beta&t=g_I8NhyFx904hDOYWgzc1MXQeoHbjHP4bS11TwIoGdI",
+      image: Luke,
       bio: "Computer Science student specializing in organizational communications, documentation, and member engagement initiatives.",
       year: "Junior",
       email: "lfiles9197@sdsu.edu",
@@ -69,8 +71,7 @@ const ExecMembers = () => {
     {
       name: "Jacob Silva",
       position: "VP of Proffesional Development",
-      image:
-        "https://media.licdn.com/dms/image/v2/D5603AQHTiNbMeARQhw/profile-displayphoto-shrink_200_200/B56ZPGemPcGsAY-/0/1734201730582?e=1760572800&v=beta&t=eazXBMh-qhBIxFV0EpxYpRCR2po2RnwHfvKtCVbbUeE",
+      image: Jacob,
       bio: "Computer Science student orchestrating professional workshops, networking events, and community outreach programs to enhance member experience. Previously @ Apple.",
       year: "Senior",
       email: "jsilva8771@sdsu.edu",
@@ -78,8 +79,7 @@ const ExecMembers = () => {
     {
       name: "Maximilian Kocherga",
       position: "VP of Outreach",
-      image:
-        "https://media.licdn.com/dms/image/v2/D4E03AQFhjkg3DZupTw/profile-displayphoto-shrink_800_800/B4EZdgPZ8uHsAo-/0/1749666341915?e=1761177600&v=beta&t=6FIzYnXxYQrFm9FlP8fW0_bu0GkOb9uhzjPQ-59qXjo",
+      image: Max,
       bio: "Marketing Major with a passion for community engagement and brand development. Driving outreach initiatives to expand our club's impact.",
       year: "Junior",
       email: "mkocherga7657@sdsu.edu",
