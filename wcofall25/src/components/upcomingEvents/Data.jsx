@@ -1,30 +1,6 @@
 export const events = [
   {
     id: 1,
-    title: "Netflix Guest Speaker",
-    type: "Speaker Event",
-    date: "10/20/2025",
-    time: "October 20th",
-    location: "MUSIC-265",
-    description:
-      "Join us for an exciting guest speaker event featuring a software engineer from Netflix. Learn about their journey, experiences, and insights into the tech industry.",
-    status: "upcoming",
-    learnMore: "",
-  },
-  {
-    id: 2,
-    title: "Zip Launch Pad Startup Workshop",
-    type: "Speaker Event",
-    date: "10/15/2025",
-    time: "October 15th",
-    location: "MUSIC-265",
-    description:
-      "Join us for a Zip Launchpad Startup Workshop featuring a guest speaker who will share insights on how to structure and format your projects for success. Learn best practices, gain practical tips, and discover strategies to make your startup stand out.",
-    status: "upcoming",
-    learnMore: "",
-  },
-  {
-    id: 3,
     title: "Inovate4SDSU Hackathon",
     type: "Hackathon",
     date: "11/15/2025",
@@ -35,6 +11,19 @@ export const events = [
     status: "upcoming",
     learnMore:
       "https://docs.google.com/forms/d/e/1FAIpQLSf3y0iYGxi0LdNoiBJ3LkJZx9-WFURiAlwHjpML6fxkIzHGBw/viewform",
+  },
+  {
+    id: 2,
+    title: "Weekly Project Meetings",
+    type: "Meeting",
+    date: "Weekly",
+    time: "Team Dependent",
+    location: "MUSIC 265 / Online",
+    description:
+      "If you have been accepted to a WCO Project Team, attend weekly meetings to collaborate with your team members, discuss project progress, and work towards achieving your project goals.",
+    status: "upcoming",
+    learnMore:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?usp=dialog",
   },
 ];
 

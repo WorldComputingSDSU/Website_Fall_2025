@@ -3,6 +3,7 @@ import sampleImg from "../../assets/class.png";
 import meetingImg from "../../assets/meeting.png";
 import websiteMeeting from "../../assets/websiteMeeting.png";
 import firstMeeting from "../../assets/firstMeeting.png";
+import netflixSpeaker from "../../assets/netflixGuestSpeaker.png";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 
@@ -12,6 +13,7 @@ function Home() {
     { src: meetingImg, alt: "WCO Meeting" },
     { src: websiteMeeting, alt: "WCO Website Meeting" },
     { src: firstMeeting, alt: "WCO First Meeting" },
+    { src: netflixSpeaker, alt: "Netflix Guest Speaker" },
   ];
 
   const navigate = useNavigate();
