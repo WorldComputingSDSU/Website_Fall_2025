@@ -113,7 +113,7 @@ const Projects = () => {
               <ProjectShowcase
                 title="AI Interviewer Bot"
                 description="The AI Interviewer Bot is a WCO project that leverages natural language processing to simulate real interview scenarios, helping users prepare for job interviews."
-                stack="NextJS, Supabase, OpenAI TTS, OpenAI GPT-4, OpenAI Embeddings, pdf2json"
+                stack="NextJS, Supabase, OpenAI TTS, OpenAI GPT-4, OpenAI Embeddings, OpenAI Whisper, pdf2json"
                 image="https://bloximages.chicago2.vip.townnews.com/thestar.com/content/tncms/assets/v3/editorial/a/33/a3373f12-6449-5b41-9a93-11ee9cfa06e2/66671a4a027ef.image.jpg?resize=750%2C500"
                 link="https://github.com/WorldComputingSDSU/ai-interviewer-proj"
               />
