@@ -25,6 +25,19 @@ export const events = [
     learnMore:
       "https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?usp=dialog",
   },
+  {
+    id: 3,
+    title: "Pinterest Guest Speaker",
+    type: "Guest Speaker",
+    date: "11/17/2025",
+    time: "4:00 PM - 5:00 PM",
+    location: "MUSIC 265",
+    description:
+      "Come join us for an exciting guest speaker event featuring a Senior Software Engineer from Pinterest! Gain insights into the tech industry, learn about career paths, and get inspired by their journey.",
+    status: "upcoming",
+    learnMore:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?usp=dialog",
+  },
 ];
 
 /**
