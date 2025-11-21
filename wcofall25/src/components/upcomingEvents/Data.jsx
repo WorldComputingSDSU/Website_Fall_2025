@@ -1,19 +1,6 @@
 export const events = [
   {
     id: 1,
-    title: "Inovate4SDSU Hackathon",
-    type: "Hackathon",
-    date: "11/15/2025",
-    time: "November 15th",
-    location: "Templo Mayor, SDSU Aztec Student Union",
-    description:
-      "Join us for the Innovate4SDSU Hackathon, where students come together to brainstorm, design, and build innovative solutions to real-world challenges. Collaborate with peers, showcase your creativity, and gain hands-on experience in problem-solving, teamwork, and entrepreneurship.",
-    status: "upcoming",
-    learnMore:
-      "https://docs.google.com/forms/d/e/1FAIpQLSf3y0iYGxi0LdNoiBJ3LkJZx9-WFURiAlwHjpML6fxkIzHGBw/viewform",
-  },
-  {
-    id: 2,
     title: "Weekly Project Meetings",
     type: "Meeting",
     date: "Weekly",
@@ -26,14 +13,14 @@ export const events = [
       "https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?usp=dialog",
   },
   {
-    id: 3,
-    title: "Pinterest Guest Speaker",
+    id: 2,
+    title: "Northrop Grumman Guest Speaker",
     type: "Guest Speaker",
-    date: "11/17/2025",
+    date: "12/8/2025",
     time: "4:00 PM - 5:00 PM",
     location: "MUSIC 265",
     description:
-      "Come join us for an exciting guest speaker event featuring a Senior Software Engineer from Pinterest! Gain insights into the tech industry, learn about career paths, and get inspired by their journey.",
+      "Come join WCO, and App Dev for an exciting guest speaker event featuring a Cyber Systems Engineer from Northrop Grumman! Gain insights into the tech industry, learn about career paths, and get inspired by their journey.",
     status: "upcoming",
     learnMore:
       "https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?usp=dialog",
