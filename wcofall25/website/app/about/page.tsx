@@ -1,12 +1,70 @@
+"use client";
+
 import { BorderBeam } from "@/components/ui/border-beam";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+
+const slideshowImages = [
+  "/assets/derek.png",
+  "/assets/firstmeeting.png",
+  "/assets/wcomeeting.png",
+  "/assets/wconetflix.png",
+  "/assets/wcowebsitemeeting.png",
+];
 
 export default function AboutPage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main className="max-w-4xl mx-auto px-6 md:px-8 py-16 md:py-24">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-12">
           ABOUT US
         </h1>
+
+        {/* Slideshow */}
+        <div className="mb-12 w-full overflow-hidden rounded-lg">
+          <div className="relative aspect-video w-full">
+            {slideshowImages.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentSlide ? "opacity-100" : "opacity-0"
+                }`}>
+                <Image
+                  src={image}
+                  alt={`WCO Image ${index + 1}`}
+                  fill
+                  className="object-cover rounded-lg"
+                  priority={index === 0}
+                />
+              </div>
+            ))}
+          </div>
+          {/* Slide Indicators */}
+          <div className="flex justify-center gap-2 mt-4">
+            {slideshowImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? "w-8 bg-primary"
+                    : "w-2 bg-foreground/30"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
 
         <div className="space-y-12">
           <section>

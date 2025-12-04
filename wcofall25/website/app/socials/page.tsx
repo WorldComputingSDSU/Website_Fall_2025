@@ -63,7 +63,7 @@ export default function SocialsPage() {
                 src="https://discord.com/widget?id=1327329013991215104&theme=dark"
                 width={350}
                 height={500}
-                allowTransparency
+                {...({ allowtransparency: "true" } as any)}
                 frameBorder="0"
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                 title="WCO Discord Server"

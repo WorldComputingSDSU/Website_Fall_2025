@@ -27,8 +27,7 @@ export default function Home() {
               transform: isWCOHovered
                 ? "scale(1.08) rotate(5deg)"
                 : "scale(1) rotate(0deg)",
-            }}
-          >
+            }}>
             <Image
               src="/images/image.png"
               alt="World Computing Organization Logo"
