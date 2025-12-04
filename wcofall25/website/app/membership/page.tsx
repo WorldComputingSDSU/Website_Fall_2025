@@ -1,52 +1,28 @@
 "use client";
 
-import type React from "react";
-
 import { Navigation } from "@/components/navigation";
-import { useState } from "react";
 
 export default function MembershipPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    year: "",
-    major: "",
-    experience: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    console.log("Form submitted:", formData);
-    // Handle form submission
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main className="max-w-4xl mx-auto px-6 md:px-8 py-16 md:py-24">
-        <div className="mb-12">
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-16 md:py-24">
+        <div className="mb-8 md:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-4">
             JOIN WCO
           </h1>
-          <p className="text-lg md:text-xl text-foreground/70">
+          <p className="text-base sm:text-lg md:text-xl text-foreground/70">
             Become part of a thriving community of computing enthusiasts at
             SDSU. Fill out the form below to express your interest in joining.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Benefits */}
           <div>
-            <h2 className="text-2xl font-bold mb-6">What You'll Get</h2>
-            <ul className="space-y-4">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6">
+              What You'll Get
+            </h2>
+            <ul className="space-y-3 md:space-y-4">
               {[
                 "Hands-on development projects",
                 "Networking with industry professionals",
@@ -57,101 +33,34 @@ export default function MembershipPage() {
               ].map((benefit, idx) => (
                 <li key={idx} className="flex gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span className="text-foreground/80">{benefit}</span>
+                  <span className="text-sm sm:text-base text-foreground/80">
+                    {benefit}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                First Name *
-              </label>
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Your first name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Last Name *
-              </label>
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Your last name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Email *
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="you@sdsu.edu"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Academic Year
-              </label>
-              <select
-                name="year"
-                value={formData.year}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-              >
-                <option value="">Select year</option>
-                <option value="freshman">Freshman</option>
-                <option value="sophomore">Sophomore</option>
-                <option value="junior">Junior</option>
-                <option value="senior">Senior</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Experience Level
-              </label>
-              <select
-                name="experience"
-                value={formData.experience}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-              >
-                <option value="">Select experience</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full px-6 py-4 bg-primary text-primary-foreground font-semibold tracking-wide hover:opacity-90 transition-opacity duration-200"
-            >
-              SUBMIT APPLICATION
-            </button>
-          </form>
+          {/* Google Forms Iframe */}
+          <div className="flex justify-center w-full">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?embedded=true"
+              width={500}
+              height={1360}
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              className="membership-iframe w-full max-w-full"
+              style={{
+                border: "none",
+                borderRadius: "8px",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                minHeight: "600px",
+              }}
+              title="WCO Membership Form">
+              Loading…
+            </iframe>
+          </div>
         </div>
       </main>
 
