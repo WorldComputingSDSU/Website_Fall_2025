@@ -43,15 +43,6 @@ export function Navigation() {
             SOCIALS
           </Link>
           <Link
-            href="/exec"
-            className={`transition-colors duration-200 ${
-              isActive("/exec")
-                ? "text-primary font-semibold"
-                : "hover:text-primary"
-            }`}>
-            EXEC BOARD
-          </Link>
-          <Link
             href="/about"
             className={`transition-colors duration-200 ${
               isActive("/about")
