@@ -15,34 +15,29 @@ export default function Home() {
       {/* Navigation */}
 
       {/* Hero Section */}
-      <main className="max-w-7xl mx-auto flex items-start justify-between px-6 md:px-8 py-16 md:py-32 gap-12 sm:p-0">
+      <main className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between px-4 sm:px-6 md:px-8 py-8 sm:py-16 md:py-32 gap-8 md:gap-12">
         {/* Left Column - WCO Logo */}
-        <div className="flex flex-col items-start pt-2 sm:pt-0">
+        <div className="flex flex-col items-center md:items-start pt-2 sm:pt-0 w-full md:w-auto">
           {/* WCO Logo */}
           <div
             onMouseEnter={() => setIsWCOHovered(true)}
             onMouseLeave={() => setIsWCOHovered(false)}
-            className="transition-transform duration-300"
-            style={{
-              transform: isWCOHovered
-                ? "scale(1.08) rotate(5deg)"
-                : "scale(1) rotate(0deg)",
-            }}>
+            className="transition-transform duration-300">
             <Image
               src="/images/image.png"
               alt="World Computing Organization Logo"
               width={280}
               height={280}
-              className="object-contain"
+              className="object-contain w-full max-w-[200px] sm:max-w-[240px] md:max-w-[280px]"
               priority
             />
           </div>
         </div>
 
         {/* Right Column - Content Only */}
-        <div className="flex-1 flex flex-col lg:ml-10 sm:ml-0 mr-3">
+        <div className="flex-1 flex flex-col lg:ml-10 sm:ml-0 md:mr-3 w-full md:w-auto text-center md:text-left">
           {/* Heading */}
-          <h1 className="text-5xl md:text-6xl font-black tracking-tighter leading-[1.2] mb-8 sm:text-xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.2] mb-6 md:mb-8">
             WORLD
             <br />
             COMPUTING
@@ -51,20 +46,20 @@ export default function Home() {
           </h1>
 
           {/* Subtitle */}
-          <div className="mt-6 space-y-1">
-            <div className="flex items-center gap-3">
+          <div className="mt-4 md:mt-6 space-y-1">
+            <div className="flex items-center justify-center md:justify-start gap-3">
               <Image
                 src="/images/sdsu.png"
                 alt="SDSU Logo"
                 width={32}
                 height={32}
-                className="object-contain"
+                className="object-contain w-6 h-6 sm:w-8 sm:h-8"
               />
-              <p className="text-xl font-black tracking-tighter leading-[1.2] ">
+              <p className="text-base sm:text-lg md:text-xl font-black tracking-tighter leading-[1.2]">
                 San Diego State University
               </p>
             </div>
-            <p className="text-lg md:text-md font-black tracking-tighter leading-[1.2] ">
+            <p className="text-sm sm:text-base md:text-lg font-black tracking-tighter leading-[1.2] text-center md:text-left">
               EST. 2024
             </p>
           </div>
@@ -79,15 +74,15 @@ export default function Home() {
             ]}
             speed={100}
             loop={true}
-            className="mt-1"
+            className="mt-4 md:mt-1 text-sm sm:text-base"
           />
 
           {/* Call to Action */}
-          <div className="mt-10 flex gap-4">
-            <Link href="/membership">
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Link href="/membership" className="w-full sm:w-auto">
               <InteractiveHoverButton text="JOIN US"></InteractiveHoverButton>
             </Link>
-            <Link href="/about">
+            <Link href="/about" className="w-full sm:w-auto">
               <InteractiveHoverButton text="ABOUT"></InteractiveHoverButton>
             </Link>
           </div>

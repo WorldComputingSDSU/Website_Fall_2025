@@ -5,22 +5,24 @@ import { Navigation } from "@/components/navigation";
 export default function MembershipPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main className="max-w-4xl mx-auto px-6 md:px-8 py-16 md:py-24">
-        <div className="mb-12">
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-16 md:py-24">
+        <div className="mb-8 md:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter mb-4">
             JOIN WCO
           </h1>
-          <p className="text-lg md:text-xl text-foreground/70">
+          <p className="text-base sm:text-lg md:text-xl text-foreground/70">
             Become part of a thriving community of computing enthusiasts at
             SDSU. Fill out the form below to express your interest in joining.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Benefits */}
           <div>
-            <h2 className="text-2xl font-bold mb-6">What You'll Get</h2>
-            <ul className="space-y-4">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6">
+              What You'll Get
+            </h2>
+            <ul className="space-y-3 md:space-y-4">
               {[
                 "Hands-on development projects",
                 "Networking with industry professionals",
@@ -31,14 +33,16 @@ export default function MembershipPage() {
               ].map((benefit, idx) => (
                 <li key={idx} className="flex gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span className="text-foreground/80">{benefit}</span>
+                  <span className="text-sm sm:text-base text-foreground/80">
+                    {benefit}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Google Forms Iframe */}
-          <div className="flex justify-center">
+          <div className="flex justify-center w-full">
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?embedded=true"
               width={500}
@@ -46,11 +50,12 @@ export default function MembershipPage() {
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
-              className="membership-iframe"
+              className="membership-iframe w-full max-w-full"
               style={{
                 border: "none",
                 borderRadius: "8px",
                 boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                minHeight: "600px",
               }}
               title="WCO Membership Form">
               Loading…

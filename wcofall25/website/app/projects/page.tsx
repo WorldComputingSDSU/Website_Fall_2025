@@ -59,12 +59,12 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main className="max-w-6xl mx-auto px-6 md:px-8 py-16 md:py-24">
-        <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl font-black tracking-tighter mb-4">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-16 md:py-24">
+        <div className="mb-8 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-4">
             OUR PROJECTS
           </h1>
-          <p className="text-lg md:text-xl text-foreground/70">
+          <p className="text-base sm:text-lg md:text-xl text-foreground/70">
             Explore the innovative projects our members have built.
           </p>
         </div>
@@ -73,18 +73,18 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group border border-foreground/30 rounded-lg p-6 hover:border-primary/50 transition-all duration-300 bg-background hover:bg-foreground/5"
+              className="group border border-foreground/30 rounded-lg p-4 sm:p-6 hover:border-primary/50 transition-all duration-300 bg-background hover:bg-foreground/5"
             >
-              <div className="flex items-start justify-between gap-6 mb-3">
-                <h3 className="text-lg font-bold group-hover:text-primary transition-colors">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-6 mb-3">
+                <h3 className="text-base sm:text-lg font-bold group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <span className="text-sm text-foreground/60 whitespace-nowrap">
+                <span className="text-xs sm:text-sm text-foreground/60 whitespace-nowrap">
                   {project.date}
                 </span>
               </div>
 
-              <p className="text-foreground/70 text-sm mb-4 leading-relaxed">
+              <p className="text-foreground/70 text-sm sm:text-base mb-4 leading-relaxed">
                 {project.description}
               </p>
 

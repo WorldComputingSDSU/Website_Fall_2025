@@ -24,20 +24,20 @@ export default function SocialsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main className="max-w-6xl mx-auto px-6 md:px-8 py-16 md:py-24">
-        <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl font-black tracking-tighter mb-4">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-16 md:py-24">
+        <div className="mb-8 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-4">
             CONNECT WITH US
           </h1>
-          <p className="text-lg md:text-xl text-foreground/70">
+          <p className="text-base sm:text-lg md:text-xl text-foreground/70">
             Stay updated with our latest news and join our community.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
           {/* LinkedIn Post */}
           <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-bold mb-6 self-start">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 self-start">
               Latest Updates
             </h2>
             <div className="w-full flex justify-center">
@@ -47,7 +47,13 @@ export default function SocialsPage() {
                 width="504"
                 frameBorder="0"
                 allowFullScreen={true}
-                title="Embedded post">
+                title="Embedded post"
+                className="w-full max-w-full"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  minHeight: "400px",
+                }}>
                 Loading...
               </iframe>
             </div>
@@ -55,7 +61,7 @@ export default function SocialsPage() {
 
           {/* Discord Widget */}
           <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-bold mb-6 self-start">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 self-start">
               Join Our Discord
             </h2>
             <div className="w-full flex justify-center">
@@ -67,10 +73,12 @@ export default function SocialsPage() {
                 frameBorder="0"
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                 title="WCO Discord Server"
-                className="discord-widget w-full max-w-[350px]"
+                className="discord-widget w-full max-w-full"
                 style={{
                   borderRadius: "8px",
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                  maxWidth: "100%",
+                  minHeight: "400px",
                 }}
               />
             </div>
@@ -78,7 +86,9 @@ export default function SocialsPage() {
 
           {/* Instagram Embed */}
           <div className="flex flex-col items-center md:col-span-2 lg:col-span-1">
-            <h2 className="text-2xl font-bold mb-6 self-start">Follow Us</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 self-start">
+              Follow Us
+            </h2>
             <div className="w-full flex justify-center">
               <blockquote
                 className="instagram-media"

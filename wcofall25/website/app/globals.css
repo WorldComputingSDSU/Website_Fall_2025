@@ -132,3 +132,44 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile-specific responsive styles */
+@layer utilities {
+  /* Ensure images are responsive on mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Make iframes responsive */
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+}
+
+/* Mobile media queries for better responsiveness */
+@media (max-width: 640px) {
+  /* Adjust font sizes for mobile */
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Improve spacing on mobile */
+  .space-y-12 > * + * {
+    margin-top: 2rem;
+  }
+}
