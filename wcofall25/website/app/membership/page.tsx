@@ -1,34 +1,8 @@
 "use client";
 
-import type React from "react";
-
 import { Navigation } from "@/components/navigation";
-import { useState } from "react";
 
 export default function MembershipPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    year: "",
-    major: "",
-    experience: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    console.log("Form submitted:", formData);
-    // Handle form submission
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main className="max-w-4xl mx-auto px-6 md:px-8 py-16 md:py-24">
@@ -63,95 +37,25 @@ export default function MembershipPage() {
             </ul>
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                First Name *
-              </label>
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Your first name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Last Name *
-              </label>
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="Your last name"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Email *
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-                placeholder="you@sdsu.edu"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Academic Year
-              </label>
-              <select
-                name="year"
-                value={formData.year}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-              >
-                <option value="">Select year</option>
-                <option value="freshman">Freshman</option>
-                <option value="sophomore">Sophomore</option>
-                <option value="junior">Junior</option>
-                <option value="senior">Senior</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Experience Level
-              </label>
-              <select
-                name="experience"
-                value={formData.experience}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-border/50 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
-              >
-                <option value="">Select experience</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full px-6 py-4 bg-primary text-primary-foreground font-semibold tracking-wide hover:opacity-90 transition-opacity duration-200"
-            >
-              SUBMIT APPLICATION
-            </button>
-          </form>
+          {/* Google Forms Iframe */}
+          <div className="flex justify-center">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?embedded=true"
+              width={500}
+              height={1360}
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              className="membership-iframe"
+              style={{
+                border: "none",
+                borderRadius: "8px",
+                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              }}
+              title="WCO Membership Form">
+              Loading…
+            </iframe>
+          </div>
         </div>
       </main>
 
