@@ -17,8 +17,7 @@ export function Navigation() {
         {/* Logo/Home Link */}
         <Link
           href="/"
-          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-        >
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <Image src="/images/wco.png" alt="WCO Logo" width={40} height={40} />
           <span className="font-bold text-lg hidden sm:inline">WCO</span>
         </Link>
@@ -31,9 +30,26 @@ export function Navigation() {
               isActive("/membership")
                 ? "text-primary font-semibold"
                 : "hover:text-primary"
-            }`}
-          >
+            }`}>
             MEMBERSHIP
+          </Link>
+          <Link
+            href="/socials"
+            className={`transition-colors duration-200 ${
+              isActive("/socials")
+                ? "text-primary font-semibold"
+                : "hover:text-primary"
+            }`}>
+            SOCIALS
+          </Link>
+          <Link
+            href="/exec"
+            className={`transition-colors duration-200 ${
+              isActive("/exec")
+                ? "text-primary font-semibold"
+                : "hover:text-primary"
+            }`}>
+            EXEC BOARD
           </Link>
           <Link
             href="/about"
@@ -41,8 +57,7 @@ export function Navigation() {
               isActive("/about")
                 ? "text-primary font-semibold"
                 : "hover:text-primary"
-            }`}
-          >
+            }`}>
             ABOUT US
           </Link>
           <Link
@@ -51,16 +66,14 @@ export function Navigation() {
               isActive("/projects")
                 ? "text-primary font-semibold"
                 : "hover:text-primary"
-            }`}
-          >
+            }`}>
             PROJECTS
           </Link>
           <Link
             href="https://aztechacks.com"
             className="hover:text-primary transition-colors duration-200"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             AZTECHACKS
           </Link>
         </div>
