@@ -12,19 +12,6 @@ export const events = [
     learnMore:
       "https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?usp=dialog",
   },
-  {
-    id: 2,
-    title: "Northrop Grumman Guest Speaker",
-    type: "Guest Speaker",
-    date: "12/8/2025",
-    time: "4:00 PM - 5:00 PM",
-    location: "MUSIC 265",
-    description:
-      "Come join WCO, and App Dev for an exciting guest speaker event featuring a Cyber Systems Engineer from Northrop Grumman! Gain insights into the tech industry, learn about career paths, and get inspired by their journey.",
-    status: "upcoming",
-    learnMore:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?usp=dialog",
-  },
 ];
 
 /**
