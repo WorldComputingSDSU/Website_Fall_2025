@@ -15,24 +15,25 @@
 }
 
 .connect-container {
-  max-width: 1200px;
+  max-width: 1180px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  gap: 48px;
 }
 
-.connect-content {
-  flex: 1;
-  max-width: 500px;
+/* Header */
+.connect-header {
+  max-width: 640px;
+  text-align: center;
 }
 
 .connect-title {
   font-size: 3rem;
   font-weight: 900;
   color: #162852;
-  margin-bottom: 24px;
+  margin: 0 0 16px 0;
   line-height: 1.1;
 }
 
@@ -40,41 +41,128 @@
   font-size: 1.25rem;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 0;
+  margin: 0;
 }
 
-.discord-widget-container {
-  flex: 0 0 auto;
+/* Platform panels */
+.connect-panels {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  gap: 32px;
+  width: 100%;
 }
 
-.discord-widget {
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(22, 40, 82, 0.15);
+.connect-panel {
+  flex: 0 1 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid rgba(22, 40, 82, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(22, 40, 82, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.discord-widget:hover {
+.connect-panel:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(22, 40, 82, 0.2);
+  box-shadow: 0 12px 40px rgba(22, 40, 82, 0.18);
+}
+
+.connect-panel-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #162852;
+  margin: 0 0 8px 0;
+}
+
+.connect-panel-text {
+  font-size: 0.98rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  min-height: 3rem;
+}
+
+.connect-panel-media {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 12px;
+  margin-top: auto;
+}
+
+/* Social panel body (Instagram, LinkedIn) */
+.connect-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.connect-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 24px;
+  font-size: 46px;
+  color: #fff;
+}
+
+.connect-social-icon-instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #dc2743 45%,
+    #cc2366 70%,
+    #bc1888 100%
+  );
+  box-shadow: 0 8px 24px rgba(188, 24, 136, 0.25);
+}
+
+.connect-social-icon-linkedin {
+  background: #0a66c2;
+  box-shadow: 0 8px 24px rgba(10, 102, 194, 0.25);
+}
+
+.connect-social-handle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #162852;
+}
+
+.connect-social-button {
+  padding: 12px 32px;
+  border-radius: 999px;
+  background: #162852;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(22, 40, 82, 0.2);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.connect-social-button:hover {
+  background: #1e3a8a;
+  transform: translateY(-2px);
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .connect-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
+@media (max-width: 900px) {
+  .connect-panel {
+    flex: 1 1 100%;
+    max-width: 420px;
   }
 
-  .connect-content {
-    max-width: 100%;
-  }
-
-  .connect-title {
-    font-size: 2.5rem;
+  .connect-panel-text {
+    min-height: 0;
   }
 }
 
@@ -84,17 +172,15 @@
   }
 
   .connect-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .connect-description {
     font-size: 1.1rem;
   }
 
-  .discord-widget {
-    width: 100%;
-    max-width: 350px;
-    height: 400px;
+  .connect-container {
+    gap: 36px;
   }
 }
 
@@ -111,7 +197,19 @@
     font-size: 1rem;
   }
 
-  .discord-widget {
-    height: 350px;
+  .connect-panel-media {
+    height: 340px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connect-panel,
+  .connect-social-button {
+    transition: none;
+  }
+
+  .connect-panel:hover,
+  .connect-social-button:hover {
+    transform: none;
   }
 }

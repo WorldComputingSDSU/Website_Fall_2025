@@ -70,6 +70,12 @@ body {
 .wco-header-right-items:hover {
   cursor: pointer;
   transform: scale(1.06);
+  color: #ffd166;
+}
+
+/* Current page */
+.wco-header-right-items.wco-header-active {
+  color: #ffd166;
 }
 
 .wco-header-logo:hover {
@@ -126,13 +132,18 @@ body {
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
-  transition: background-color 120ms ease, transform 120ms ease;
+  transition: background-color 120ms ease, transform 120ms ease, color 120ms ease;
 }
 
 .wco-header-menu-item:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateX(2px);
   cursor: pointer;
+  color: #ffd166;
+}
+
+.wco-header-menu-item.wco-header-active {
+  color: #ffd166;
 }
 
 /* Responsive behavior */
