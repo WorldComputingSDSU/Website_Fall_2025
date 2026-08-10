@@ -176,9 +176,9 @@ const ExecMembers = () => {
           }}>
           Class of{" "}
           {member.year === "Senior"
-            ? "2026"
-            : member.year === "Junior"
             ? "2027"
+            : member.year === "Junior"
+            ? "2028"
             : "2028"}
         </Typography>
 
