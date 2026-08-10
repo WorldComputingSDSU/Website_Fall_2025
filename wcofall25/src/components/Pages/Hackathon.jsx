@@ -8,6 +8,37 @@ import "./Hackathon.css";
 const FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScO3Vx6TK6-mR5Ye-1cuGS0Qbr_BvUk8JbTutPjbuYX83EbBw/viewform";
 
+// For students who want to help plan and run the hackathon, not just attend it.
+const ORGANIZER_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScn91Uh2wy1yEFCIQBfIpXwN672cXF--6zok5wOli6LleO8YA/viewform";
+
+const organizerRoles = [
+  {
+    label: "Programming",
+    note: "Planning the schedule, tracks, and challenges teams will build against.",
+  },
+  {
+    label: "Sponsorships",
+    note: "Reaching out to companies for funding, prizes, and industry judges.",
+  },
+  {
+    label: "Marketing",
+    note: "Design, social media, and getting the word out across campus.",
+  },
+  {
+    label: "Logistics",
+    note: "Venue, food, check-in, and keeping the weekend running smoothly.",
+  },
+  {
+    label: "Mentorship",
+    note: "Running workshops and helping teams get unstuck during the event.",
+  },
+  {
+    label: "Tech",
+    note: "Registration, the website, and the tooling teams use on the day.",
+  },
+];
+
 const detailCards = [
   {
     label: "When",
@@ -180,6 +211,90 @@ const Hackathon = () => {
                   • {item}
                 </Typography>
               ))}
+            </Box>
+          </Box>
+        </motion.div>
+
+        {/* Organizer / volunteer interest */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.15 }}>
+          <Box
+            sx={{
+              mt: 10,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              gap: "12px",
+            }}>
+            <Typography
+              sx={{
+                fontSize: "2.2rem",
+                fontWeight: 900,
+                color: "#162852",
+                lineHeight: 1.1,
+              }}>
+              Want to Help Organize?
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: "1.05rem",
+                color: "#6b7280",
+                maxWidth: "680px",
+                lineHeight: 1.6,
+              }}>
+              A hackathon this size takes a team to pull off, and we're building
+              that team now. No experience organizing events needed, just
+              interest and some time to give.
+            </Typography>
+            <Box
+              sx={{
+                mt: 3,
+                width: "100%",
+                display: "grid",
+                gridTemplateColumns: {
+                  xs: "1fr",
+                  sm: "repeat(2, 1fr)",
+                  md: "repeat(3, 1fr)",
+                },
+                gap: "20px",
+                textAlign: "left",
+              }}>
+              {organizerRoles.map((role) => (
+                <div className="hackathon-card" key={role.label}>
+                  <Typography
+                    sx={{
+                      fontSize: "1.15rem",
+                      fontWeight: 900,
+                      color: "#162852",
+                      mb: "6px",
+                    }}>
+                    {role.label}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "0.95rem",
+                      color: "#6b7280",
+                      lineHeight: 1.6,
+                    }}>
+                    {role.note}
+                  </Typography>
+                </div>
+              ))}
+            </Box>
+            <Box sx={{ mt: 4 }}>
+              <a
+                href={ORGANIZER_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}>
+                <button className="hackathon-cta">
+                  Sign Up to Help Organize
+                </button>
+              </a>
             </Box>
           </Box>
         </motion.div>
