@@ -1,0 +1,91 @@
+.hackathon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(22, 40, 82, 0.08);
+  color: #162852;
+  border: 1px solid rgba(22, 40, 82, 0.18);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hackathon-badge-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #162852;
+  animation: hackathon-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes hackathon-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+}
+
+.hackathon-cta {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  background: #162852;
+  color: #fff;
+  box-shadow: 0 4px 18px 0 rgba(22, 40, 82, 0.2);
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.hackathon-cta:hover {
+  background: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+.hackathon-card {
+  background: #fff;
+  border: 1px solid rgba(22, 40, 82, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(22, 40, 82, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  height: 100%;
+}
+
+.hackathon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(22, 40, 82, 0.14);
+}
+
+.hackathon-iframe {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 640px;
+  max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  .hackathon-iframe {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hackathon-badge-dot {
+    animation: none;
+  }
+  .hackathon-card:hover {
+    transform: none;
+  }
+}

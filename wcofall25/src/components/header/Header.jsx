@@ -1,16 +1,28 @@
 import "./Header.css";
 import wcologo from "../../assets/wcologo.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+
+const navLinks = [
+  { path: "/", label: "Home" },
+  { path: "/hackathon", label: "Hackathon" },
+  { path: "/projects", label: "Projects" },
+  { path: "/membership", label: "Membership Form" },
+  { path: "/exec", label: "Exec Board" },
+];
 
 function Header() {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const go = (path) => {
     setMenuOpen(false);
     navigate(path);
   };
+
+  const classFor = (base, path) =>
+    pathname === path ? `${base} wco-header-active` : base;
 
   return (
     <header className="wco-header-bar">
@@ -19,23 +31,14 @@ function Header() {
       </div>
 
       <div className="wco-header-right-container">
-        <div className="wco-header-right-items" onClick={() => go("/")}>
-          Home
-        </div>
-
-        <div className="wco-header-right-items" onClick={() => go("/projects")}>
-          Projects
-        </div>
-        <div
-          className="wco-header-right-items"
-          onClick={() => go("/membership")}>
-          Membership Form
-        </div>
-        <div
-          className="wco-header-right-items"
-          onClick={() => navigate("/exec")}>
-          Exec Board
-        </div>
+        {navLinks.map((link) => (
+          <div
+            key={link.path}
+            className={classFor("wco-header-right-items", link.path)}
+            onClick={() => go(link.path)}>
+            {link.label}
+          </div>
+        ))}
       </div>
 
       <button
@@ -47,20 +50,14 @@ function Header() {
 
       {menuOpen && (
         <div className="wco-header-menu">
-          <div className="wco-header-menu-item" onClick={() => go("/")}>
-            Home
-          </div>
-          <div className="wco-header-menu-item" onClick={() => go("/projects")}>
-            Projects
-          </div>
-          <div
-            className="wco-header-menu-item"
-            onClick={() => go("/membership")}>
-            Membership Form
-          </div>
-          <div className="wco-header-menu-item" onClick={() => go("/exec")}>
-            Exec Board
-          </div>
+          {navLinks.map((link) => (
+            <div
+              key={link.path}
+              className={classFor("wco-header-menu-item", link.path)}
+              onClick={() => go(link.path)}>
+              {link.label}
+            </div>
+          ))}
         </div>
       )}
     </header>

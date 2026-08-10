@@ -12,6 +12,8 @@ import Footer from "../footer/Footer";
 import victoria from "../../assets/vic2.png";
 import Caleb from "../../assets/calebProf.png";
 import Enzo from "../../assets/enzoHeadshot.jpeg";
+import Christos from "../../assets/christosHeadshot.jpeg";
+import Noam from "../../assets/noamHeadshot.jpeg";
 import Adam from "../../assets/adamHeadshot.jpeg";
 import dih from "../../assets/dihHeadshot.jpeg";
 import Luke from "../../assets/lukeHeadshot.jpeg";
@@ -19,21 +21,40 @@ import Jacob from "../../assets/jacobHeadshot.jpeg";
 import Max from "../../assets/MaxHeadshot.jpeg";
 
 const ExecMembers = () => {
-  const execMembers = [
+  const leadership = [
     {
-      name: "Enzo Weiss",
+      name: "Christos Kotsiopulos",
       position: "President",
-      image: Enzo,
+      image: Christos,
       bio: "Computer Science major with a passion for technology and leadership. Leading WCO to new heights through strategic vision and collaborative excellence.",
       year: "Junior",
+      email: "ckotsiopulos5746@sdsu.edu",
+    },
+    {
+      name: "Noam Garibi",
+      position: "Vice President",
+      image: Noam,
+      bio: "Computer Science student focused on building innovative solutions and fostering community growth. Dedicated to advancing our mission through technology.",
+      year: "Junior",
+      email: "ngaribi3916@sdsu.edu",
+    },
+  ];
+
+  const executiveTeam = [
+    {
+      name: "Enzo Weiss",
+      position: "Advisor",
+      image: Enzo,
+      bio: "Former WCO President who helped grow the club into what it is today. Now advising the board on strategy and long term direction.",
+      year: "Senior",
       email: "eweiss5244@sdsu.edu",
     },
     {
       name: "Caleb Dickson",
-      position: "Vice President",
+      position: "Advisor",
       image: Caleb,
-      bio: "Computer Science student focused on building innovative solutions and fostering community growth. Dedicated to advancing our mission through technology.",
-      year: "Junior",
+      bio: "Former WCO Vice President who helped build out the club's project teams. Now advising the board on projects and community growth.",
+      year: "Senior",
       email: "cdickson9858@sdsu.edu",
     },
     {
@@ -85,9 +106,6 @@ const ExecMembers = () => {
       email: "mkocherga7657@sdsu.edu",
     },
   ];
-
-  const leadership = execMembers.slice(0, 2);
-  const executiveTeam = execMembers.slice(2);
 
   const MemberCard = ({ member, isLeadership = false }) => (
     <Card
