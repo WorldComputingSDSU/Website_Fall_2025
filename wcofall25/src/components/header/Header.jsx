@@ -1,5 +1,5 @@
 import "./Header.css";
-import wcologo from "../../assets/wcologo.png";
+import wcologo from "../../assets/wcoLogoOrb.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
