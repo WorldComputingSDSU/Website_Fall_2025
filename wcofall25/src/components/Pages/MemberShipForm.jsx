@@ -158,7 +158,7 @@ const MemberShipForm = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.3 }}>
                 <iframe
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSfqb9YMJvKk5xndeUM6NpKmzShYeH6pg-jTo_Njry-WPV5MNA/viewform?embedded=true"
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSevI6_lUTModQi7c3hZ6VAnRkzFeqsSu-x2Zr-eRUmJ4ptONg/viewform?embedded=true"
                   width="500"
                   height="1360"
                   frameBorder="0"
